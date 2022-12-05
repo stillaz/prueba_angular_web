@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Clientes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let cliente of clientes| async">
+      <ion-text>
+        <ion-title>
+          {{cliente.nombre}}
+          <ion-note>
+            {{cliente.identificacion}}
+          </ion-note>
+        </ion-title>
+
+        <io-label>
+          {{cliente.telefono}}
+        </io-label>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content>
