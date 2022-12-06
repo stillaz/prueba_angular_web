@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let cliente of clientes| async">
+    <ion-item button detail *ngFor="let cliente of clientes| async" (click)="ver(cliente)">
       <ion-text>
         <ion-title>
           {{cliente.nombre}}
@@ -16,11 +16,11 @@
             {{cliente.identificacion}}
           </ion-note>
         </ion-title>
-
-        <io-label>
-          {{cliente.telefono}}
-        </io-label>
       </ion-text>
+
+      <ion-label slot="end">
+        {{cliente.telefono}}
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

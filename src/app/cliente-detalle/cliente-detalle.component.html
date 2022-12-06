@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Datos de cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Identificacion</ion-label>
+        <ion-input [(ngModel)]="cliente.identificacion"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="cliente.nombre"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="floating">Telefono</ion-label>
+        <ion-input [(ngModel)]="cliente.telefono"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
